@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Dynamic Resume</title>
+</head>
+
+<body>
+  <h1 class="first-heading">Resume Buider Application By Faizan Raza</h1>
+  <form id="myForm">
+    <fieldset>
+      <legend>Personal information<br>
+        <pre id="hideInresponse">(must provide all information)</pre>
+      </legend>
+      <label for="name">Name :</label>
+      <input type="text" id="name" required>
+      <br>
+      <label for="jobTitle">Job title :</label>
+      <input type="text" id="jobTitle" required>
+      <br>
+      <label for="email">Email :</label>
+      <input type="email" id="email" required>
+      <br>
+      <label for="phone">Contact :</label>
+      <input type="tel" name="phone" id="phone" required>
+      <br>
+      <label for="linkdin">Linkdin :</label>
+      <input type="text" name="linkdin" id="linkdin" required>
+      <br>
+      <label for="phone">Address :</label>
+      <input type="Address" name="Address" id="address" required>
+      <br>
+      <label for="profileImage">Profile pic :<span id="pfp-description">(make sure your profile pic is professional and
+          in square
+          shape)</span>
+      </label>
+      <input type="file" id="profileImage" accept="image">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend> Objective </legend>
+      <label for="Personal Detail">
+        <textarea name="Personal Detail" id="personalDetail" required></textarea>
+        
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+      <legend>Certification</legend>
+      <label for="Certification">
+        <p> "course name, academy name , star tyear-end year ,......"</p>
+        <input type="text" name="certification" id="certificate" required>
+        <p>type your course Name use (,)comma add academy name and agian use add years</p>
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+      <legend>Education</legend>
+      <label for="education">
+        <p>"degree name, academy name , start year - end year ,......"</p>
+        <input name="education" id="education" required></input>
+        <p>type your degree use (,)comma add academy name and agian use add years</p>
+
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Experience</legend>
+      <label for="experience">
+        <p>"post , company name , year-year ,......"</p>
+        <input name="experience" id="experience" required></input>
+        <p>type your post use (,)comma add academy name and agian use add years</p>
+
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Skills</legend>
+      <label for="skill">
+        <p>"first skill, sec skill , third skill ,......"</p>
+        <input type="text" id="skills" required>
+        <p>type your skill use (,)comma add more skills</p>
+
+      </label>
+    </fieldset>
+    <br>
+    <button type="submit" class="generate-button" id="getResumeButton">Get Resume</button>
+  </form>
+
+  <div class="cv">
+    <div class="side">
+      <div class="info">
+        <div class="pfp">
+          <img src="profile pic.jpg" alt="pfp" id="profilePic" />
+        </div>
+        <h3>Contact</h3>
+        <br />
+
+        <p><strong><i class="fas fa-phone-volume" style="padding-right: 5px;"></i>Contact:</strong></p>
+        <p><span id="phoneCv">0310-0000000</span></p>
+        <br />
+        <p><strong><i class="fas fa-envelope-open-text" style="padding-right: 5px;"></i>Email:</strong></p>
+        <p><span id="emailCv">fr96*****@gmail.com</span></p>
+        <br />
+        <p><strong><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>Address:</strong></p>
+        <p><span id="addressCv">N-17** sector 5J, new karachi, Karachi</span></p>
+        <br />
+        <p><strong><i class="fab fa-linkedin" style="padding-right: 5px;"></i>Linkdin:</strong></p>
+        <p><span id="linkdinCv">Faizan Raza</span></p>
+        <br />
+        <hr />
+        <br />
+
+        <div id="skills">
+          <h3>Skills</h3>
+          <br />
+          <ul id="skillsCv">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+        <br />
+        <button id="toggle">Hide Skills</button>
+      </div>
+    </div>
+    <div class="main">
+        <div class="name">
+            <h1 id="nameCv"><big>Faizan Raza</big></h1>
+            <h4 id="jobTitleCv">FRONTEND DEVELOPVER</h4>
+          </div>
+
+      <div class="information">
+        <h3 style="text-align: left"> OBJECTIVE</h3>
+        <br />
+        <p style="text-align: left"><span id="personalDetailCv">
+          Enthusiastic computer science student specializing in AI, Metaverse,
+           and Web 3.0 development through a course at Governor House.
+            Proven experience in creating projects that apply theoretical knowledge to practical applications. 
+          Aiming to develop expertise and contribute to innovative technology solutions.
+          </span>
+        </p>
+
+        <br />
+
+        <h3>WORK EXPERIENCE</h3>
+        <br />
+        <div id="experienceCv">
+         
+          <p><b>Machine opreator</b></p>
+          <p  style="float: right;" >2023-24</p>
+
+          <p>1 year Machine opreator form Mellinium(pvt)</p>
+        </div>
+
+        <br />
+
+        <h3>CERTIFICATION</h3>
+        <br />
+        <div id="certificationContainer">
+          <p><b><span id="courseNameCv">Certified Cloud Applied Generative AI Engineering</span></b></p>
+          <p   style="float: right;" id="yearCv">2023-25</p>
+          <p id="academyCv">Governor House</p>
+         <br> 
+          <p><b><span id="courseNameCv">Graphic designer</span></b></p>
+          <p style="float: right;">2022 </p>
+          <p   id="academyCv">Digi skill.pk</p>
+
+        </div>
+
+        <br />
+        <h3>EDUCATION</h3>
+        <br />
+        <div id="educationCv">
+          <p><b>Intermidiate</b></p>
+          <p style="float: right;">2022-24</p>
+          <p>Alkhair College</p>
+
+          <br />
+          <p><b>Matriculation</b></p>
+          <p style="float: right;">2007-22</p>
+          <p>Alkhair Secondary School</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
